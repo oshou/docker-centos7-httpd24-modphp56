@@ -5,13 +5,13 @@ services:
     image: busybox
     volumes: 
       - ./data/www:/var/www
-      - ./logs/unitd:/var/log/unitd.log
+      - ./logs/httpd:/var/log/httpd
 
-  nginx-unit:
-    container_name: 'unit'
-    image:
-      - oshou/docker-centos7-unit:latest
+  httpd_modphp56:
+    container_name: 'httpd_modphp56'
+    image: oshou/docker-centos7-httpd24-modphp56:latest
     volumes_from:
       - data-volume
     ports:
-      - 8300:8300
+      - 80:80
+      - 443:443
