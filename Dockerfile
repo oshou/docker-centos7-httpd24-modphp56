@@ -13,7 +13,7 @@ RUN yum install -y epel-release && \
     rpm -Uvh http://www.city-fan.org/ftp/contrib/yum-repo/city-fan.org-release-1-13.rhel7.noarch.rpm && \
     rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 
-# install Packages
+# install packages
 RUN yum install -y \
         # Tools
         less \
