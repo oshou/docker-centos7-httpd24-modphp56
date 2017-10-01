@@ -38,7 +38,6 @@ RUN yum install -y \
     # cache cleaning
     yum clean all
         
-
 # httpd
 COPY ./conf/httpd.conf /etc/httpd/conf/httpd.conf
 COPY ./conf/00-mpm.conf /etc/httpd/conf.modules.d/00-mpm.conf
